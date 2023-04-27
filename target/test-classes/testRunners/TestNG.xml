@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Open cart Test regression playwright suite" parallel="classes" thread-count="2" verbose="4">
+
+    <test name="Opencart Homepage Test - verify title, URL and search text in open cart">
+        <classes>
+            <class name="com.qa.opencart.tests.HomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="Opencart LoginPage Test - verify title, forgot password link and login functionality in open cart">
+        <classes>
+            <class name="com.qa.opencart.tests.LoginPageTest"/>
+        </classes>
+    </test>
+
+</suite>
