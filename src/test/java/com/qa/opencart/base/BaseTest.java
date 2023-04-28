@@ -6,8 +6,6 @@ import com.qa.opencart.pages.HomePage;
 import com.qa.opencart.pages.LoginPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
-import java.util.Locale;
 import java.util.Properties;
 
 public class BaseTest {
