@@ -1,22 +1,19 @@
 package com.qa.opencart.listeners;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import org.testng.ITestContext;
+
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Calendar;
 import java.util.Date;
-
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import org.testng.ITestContext;
 import static com.qa.opencart.factory.PlaywrightFactory.takeScreenshot;
 
 public class ExtentReportListener implements ITestListener {
@@ -36,7 +33,7 @@ public class ExtentReportListener implements ITestListener {
         if (!Files.exists(path)) {
             try {
                 Files.createDirectories(path);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 // fail to create directory
                 e.printStackTrace();
             }
@@ -70,13 +67,13 @@ public class ExtentReportListener implements ITestListener {
         test.remove();
 
         // To open the report automatically after test execution
-        /**
-        try {
-            Desktop.getDesktop().browse(new File("build/TestExecutionReport.html").toURI());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-         **/
+        /*
+         *try {
+         *    Desktop.getDesktop().browse(new File("build/TestExecutionReport.html").toURI());
+         * } catch (IOException e) {
+         *    e.printStackTrace();
+         *}
+         */
     }
 
     @Override
