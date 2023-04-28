@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Open cart Test regression playwright suite" parallel="tests" thread-count="2" verbose="4">
+<suite name="Open cart Test regression playwright suite" parallel="false" thread-count="1">
+
+    <listeners>
+        <listener class-name="com.qa.opencart.listeners.ExtentReportListener"></listener>
+    </listeners>
 
     <test name="Opencart Homepage Test - verify title, URL and search text in open cart">
         <classes>
